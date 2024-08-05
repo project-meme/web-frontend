@@ -1,0 +1,100 @@
+
+.container {
+    padding: 0px 10px;
+}
+
+.bannerContainer {
+    background-color: blueviolet;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    flex-direction: row;
+}
+
+.categoryContainer {
+    padding: 6px;
+    display: grid;
+    gap: 4px;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    -webkit-box-align: center;
+    overflow-x: scroll;
+    border-bottom: 0.5px solid;
+    padding-bottom: 15px;
+}
+
+.centerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    background-color: aqua;
+}
+
+.marginTopContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.flexContainer {
+    width: 62px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.categoryImg {
+    width : 4rem;
+    height: 4rem;
+    border-radius: 50px;
+}
+
+.categoryTxt {
+    font-size: 14px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 16px;
+}
+
+.titleTxt {
+    font-size: 18px;
+    font-family: "Pretendard-Regular";
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+}
+
+.subTitleTxt {
+    font-size: 13px;
+    font-family: "Pretendard-Light";
+    letter-spacing: -0.6px;
+}
+
+.bestSceneContainer {
+    padding: 6px;
+    display: grid;
+    gap: 4px;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    -webkit-box-align: center;
+    overflow-x: scroll;
+}
+
+.bestSceneImg {
+    width : 11.5rem;
+    height: 16.8rem;
+    border-radius: 8px;
+    object-fit: cover;
+}

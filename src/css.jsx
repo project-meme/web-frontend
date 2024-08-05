@@ -1,0 +1,20 @@
+export const colors = {
+    color_main: "#6F38E3",
+    color_purple1: "#A17BF0",
+    color_purple2: "#EAE0FF",
+    color_purple3 : "#8381E9",
+    color_red: "#E80A32",
+    color_yellow: "#FFBB0E",
+    color_white: "#FFFFFF",
+    color_black: "#161616",
+    color_gray0: "#606060",
+    color_gray0_1 : "#ABABAD",
+    color_gray1: "#999999",
+    color_gray2: "#E5E5E5",
+    color_gray3: "#F0F0F0",
+    color_gray3_1 : "#F4F5F9",
+    color_gray4: "#F9F9F9",
+    color_pink: '#E2C3DD',
+    color_blue: '#D8EEF1',
+    color_hotpink : '#FB4775'
+  };

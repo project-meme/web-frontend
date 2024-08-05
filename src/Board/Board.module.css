@@ -1,0 +1,72 @@
+:root {
+    --color_main: "#6F38E3";
+    --color_purple1: "#A17BF0";
+    --color_purple2: "#EAE0FF";
+    --color_purple3 : "#8381E9";
+    --color_red: "#E80A32";
+    --color_yellow: "#FFBB0E";
+    --color_white: "#FFFFFF";
+    --color_black: "#161616";
+    --color_gray0: "#606060";
+    --color_gray0_1 : "#ABABAD";
+    --color_gray1: "#999999";
+    --color_gray2: "#E5E5E5";
+    --color_gray3: "#F0F0F0";
+    --color_gray3_1 : "#F4F5F9";
+    --color_gray4: "#F9F9F9";
+    --color_pink: '#E2C3DD';
+    --color_blue: '#D8EEF1';
+    --color_hotpink : '#FB4775';
+    --padding-sm: 5px;
+    --padding-lg:20px;
+    --margin-sm: 5px;
+  }
+
+.gridContainer {
+    padding: 6px;
+    display: grid;
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-rows: 1fr;
+    place-items: center;
+    -webkit-box-align: center;
+    overflow-x: scroll;
+}
+
+.contentContainer {
+    padding: 12px 0px;
+    width : 100%;
+    align-items: center;
+    display: flex;
+    background-color: var(--color_white);
+    border-bottom: 0.1em solid #F9F9F9;
+}
+
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-family : "Pretendard-Medium";
+    font-size : 18px;
+    margin-bottom : 4px;
+    padding-right: 4px;
+    text-align: left;    
+}
+
+.content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-family : "Pretendard-Light";
+    font-size : 16px;
+    margin-bottom : 6px;
+    padding-right: 4px;
+    color : #999999;
+    text-align: left;   
+}
