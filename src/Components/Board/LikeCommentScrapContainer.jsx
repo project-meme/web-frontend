@@ -2,19 +2,20 @@ import React from "react";
 import comment from "../../Aseets/com.png";
 import thumbs from "../../Aseets/thumbs_black.png";
 import scrap from "../../Aseets/star_black.png";
+import styles from "../../Board/Board.module.css"
 
 
 export default function LikeCommentScrapContainer({data}){
     console.log(data);
     return(
-        <div style={{display : "flex", overflow: "hidden", flexDirection : 'row', alignItems : 'center', gap : 4}}>
-            <img src={thumbs} style={{width : 13, height : 13, opacity : 0.5}} alt="댓글"/>
-            <a href="{()=>false}" >{data.likedCnt}</a>
-            <img src={comment} style={{width : 13, height : 13, opacity : 0.5}} alt="댓글"/>
-            <a href="{()=>false}">{data.commentCnt}</a>
-            <img src={scrap} style={{width : 13, height : 13, opacity : 0.5}} alt="댓글"/>
-            <a href="{()=>false}">{data.scrappedCnt}</a>
-            <a href="{()=>false}">|</a>
+        <div style={{display : "flex", padding : 0, overflow: "hidden", flexDirection : 'row', alignItems : 'center', gap : 4}}>
+            <img src={thumbs} className={styles.icon} alt="댓글"/>
+            <p className={styles.infoTxt}>{data.likedCnt}</p>
+            <img src={comment} className={styles.icon} alt="댓글"/>
+            <p className={styles.infoTxt}>{data.commentCnt}</p>
+            <img src={scrap} className={styles.icon} alt="댓글"/>
+            <p className={styles.infoTxt}>{data.scrappedCnt}</p>
+            <p className={styles.infoTxt}>|</p>
 
         </div>
     )

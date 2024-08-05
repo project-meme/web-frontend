@@ -188,13 +188,13 @@ export default function BoardDetail(){
                 <div className={styles.contentContainer}>
                     <div style={{display : "flex", flexDirection : 'row', width : "100%",}}>
                     <div style={{display : "flex", flexDirection : "column", alignItems : 'flex-start'}}>
-                    <a href="{()=>false}" className={styles.title}>{item.content}</a>
-                    <a href="{()=>false}" className={styles.content}>{item.content}</a>
-                    <div style={{display :"flex",flexDirection : "row", fontSize : 15, gap :4, color : colors.color_gray1, alignItems : 'center'}}>
+                    <p className={styles.title}>{item.content}</p>
+                    <p className={styles.content}>{item.content}</p>
+                    <div style={{display :"flex", flexDirection : "row", fontSize : 15, color : colors.color_gray1, alignItems : 'center'}}>
                     <LikeCommentScrapContainer data={item}/>
-                    <a href="{()=>false}">{elapsedTime(item.createdAt)}</a>
-                    <a href="{()=>false}">|</a>
-                    <a href="{()=>false}">{item.author}</a>
+                    <p className={styles.infoTxt}>{elapsedTime(item.createdAt)}</p>
+                    <p className={styles.infoTxt}>|</p>
+                    <p className={styles.infoTxt}>{item.author}</p>
                     </div>
                     </div>
                     </div>

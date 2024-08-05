@@ -53,7 +53,8 @@
     font-size : 18px;
     margin-bottom : 4px;
     padding-right: 4px;
-    text-align: left;    
+    text-align: left;   
+    margin: 0px; 
 }
 
 .content {
@@ -65,8 +66,22 @@
     -webkit-box-orient: vertical;
     font-family : "Pretendard-Light";
     font-size : 16px;
-    margin-bottom : 6px;
     padding-right: 4px;
     color : #999999;
     text-align: left;   
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+.infoTxt {
+    margin : 0px;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.icon {
+    width: 11px;
+    height: 11px;
+    opacity: 0.5;
+    object-fit: contain;
 }

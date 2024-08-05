@@ -29,7 +29,6 @@
     flex-direction: column;
     align-items: center;
     padding-top: 0px;
-    background-color: aqua;
 }
 
 .marginTopContainer {
@@ -59,6 +58,8 @@
 
 .categoryTxt {
     font-size: 14px;
+    line-height: 16px;
+    margin: 0px;
 }
 
 .titleContainer {
@@ -72,6 +73,8 @@
     font-size: 18px;
     font-family: "Pretendard-Regular";
     letter-spacing: -1px;
+    line-height: 21px;
+    margin : 0px;
     margin-bottom: 4px;
 }
 
@@ -79,6 +82,8 @@
     font-size: 13px;
     font-family: "Pretendard-Light";
     letter-spacing: -0.6px;
+    line-height: 15px;
+    margin: 0px;
 }
 
 .bestSceneContainer {

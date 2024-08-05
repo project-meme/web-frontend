@@ -8,7 +8,7 @@ export default function TitleHeader({title}){
                 <div className={styles.iconContainer}>
                     <img src={backIcon} alt= "이미지" style={{width : 16, height: 16}}/>
                 </div>
-                <a href="{()=>false}" className={styles.titleTxt}>{title}</a>
+                <p className={styles.titleTxt}>{title}</p>
                 <div className={styles.iconContainer}>
                     <img className={styles.icon} src={search} alt="알림"/>
                 </div>

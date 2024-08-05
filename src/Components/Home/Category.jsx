@@ -21,7 +21,7 @@ export default function Category(data){
     ]
 
     const handleProfile = (item) => {
-        navigate('/Board', {
+        navigate(`/Board/${item.txt}`, {
             state : {
                 data : item,
             }
@@ -38,7 +38,7 @@ export default function Category(data){
                 <div className={styles.marginTopContainer} onClick={() => handleProfile(item)}>
                     <div className={styles.flexContainer}>
                     <img className={styles.categoryImg} src={dummyList[index].image} alt="장르"/>
-                    <a href="{()=>false}" className={styles.categoryTxt}>{item.txt}</a>
+                    <p className={styles.categoryTxt}>{item.txt}</p>
                     </div>
                     </div>
 

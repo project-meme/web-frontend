@@ -17,7 +17,7 @@ export default function Router() {
         <Route path='/second' element={<Second />} />
         <Route path='/third' element={<Third />} />
         <Route path='/fourth' element={<Fourth />} />        
-        <Route path='/board' element={<BoardDetail/>}/>
+        <Route path='/board/:id' element={<BoardDetail/>}/>
       </Routes>
     </BrowserRouter>
   );
