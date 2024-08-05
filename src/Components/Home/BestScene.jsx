@@ -15,8 +15,8 @@ export default function BestScene(){
     return(
         <div>
         <div className={styles.titleContainer}>
-            <a className={styles.titleTxt}>명장면 엿보기</a>
-            <a className={styles.subTitleTxt}>취향에 딱맞는 웹툰을 찾을 때까지</a>
+            <a href="{()=>false}" className={styles.titleTxt}>명장면 엿보기</a>
+            <a href="{()=>false}" className={styles.subTitleTxt}>취향에 딱맞는 웹툰을 찾을 때까지</a>
         </div>
         <div className={styles.bestSceneContainer}>
         {dummyList.map((item, index)=>(
