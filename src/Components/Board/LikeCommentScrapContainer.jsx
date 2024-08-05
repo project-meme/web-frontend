@@ -9,12 +9,12 @@ export default function LikeCommentScrapContainer({data}){
     return(
         <div style={{display : "flex", overflow: "hidden", flexDirection : 'row', alignItems : 'center', gap : 4}}>
             <img src={thumbs} style={{width : 13, height : 13, opacity : 0.5}} alt="댓글"/>
-            <a>{data.likedCnt}</a>
+            <a href="{()=>false}" >{data.likedCnt}</a>
             <img src={comment} style={{width : 13, height : 13, opacity : 0.5}} alt="댓글"/>
-            <a>{data.commentCnt}</a>
+            <a href="{()=>false}">{data.commentCnt}</a>
             <img src={scrap} style={{width : 13, height : 13, opacity : 0.5}} alt="댓글"/>
-            <a>{data.scrappedCnt}</a>
-            <a>|</a>
+            <a href="{()=>false}">{data.scrappedCnt}</a>
+            <a href="{()=>false}">|</a>
 
         </div>
     )
