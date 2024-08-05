@@ -3,8 +3,7 @@ import romance from "../../Aseets/romanceImg.png"
 import thril from "../../Aseets/thrillImg.png"
 import fantasy from "../../Aseets/fantasyImg.png"
 import styles from "./Home.module.css"
-import { NavLink } from "react-router-dom";
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Category(data){
     const navigate = useNavigate();
@@ -39,7 +38,7 @@ export default function Category(data){
                 <div className={styles.marginTopContainer} onClick={() => handleProfile(item)}>
                     <div className={styles.flexContainer}>
                     <img className={styles.categoryImg} src={dummyList[index].image} alt="장르"/>
-                    <a className={styles.categoryTxt}>{item.txt}</a>
+                    <a href="{()=>false}" className={styles.categoryTxt}>{item.txt}</a>
                     </div>
                     </div>
 

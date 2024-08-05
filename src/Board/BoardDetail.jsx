@@ -188,19 +188,19 @@ export default function BoardDetail(){
                 <div className={styles.contentContainer}>
                     <div style={{display : "flex", flexDirection : 'row', width : "100%",}}>
                     <div style={{display : "flex", flexDirection : "column", alignItems : 'flex-start'}}>
-                    <a className={styles.title}>{item.content}</a>
-                    <a className={styles.content}>{item.content}</a>
+                    <a href="{()=>false}" className={styles.title}>{item.content}</a>
+                    <a href="{()=>false}" className={styles.content}>{item.content}</a>
                     <div style={{display :"flex",flexDirection : "row", fontSize : 15, gap :4, color : colors.color_gray1, alignItems : 'center'}}>
                     <LikeCommentScrapContainer data={item}/>
-                    <a>{elapsedTime(item.createdAt)}</a>
-                    <a>|</a>
-                    <a>{item.author}</a>
+                    <a href="{()=>false}">{elapsedTime(item.createdAt)}</a>
+                    <a href="{()=>false}">|</a>
+                    <a href="{()=>false}">{item.author}</a>
                     </div>
                     </div>
                     </div>
                     <div>
                         {item.imageList.length > 0 && (
-                        <img src={item.imageList} style={{alignSelf : "flex-end",width : 100, height : 100, borderRadius : 12,}}referrerPolicy="no-referrer"/> )}
+                        <img src={item.imageList} alt="이미지" style={{alignSelf : "flex-end",width : 100, height : 100, borderRadius : 12,}}referrerPolicy="no-referrer"/> )}
                         </div>
                     </div>
 
