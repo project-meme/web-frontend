@@ -1,21 +1,17 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import TitleHeader from "../Components/Layout/Header/TitleHeader";
 import styles from "./Board.module.css"
 import { colors } from "../css";
 import { elapsedTime } from "../utils/TimeConverter";
 import LikeCommentScrapContainer from "../Components/Board/LikeCommentScrapContainer";
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function BoardDetail(){
-
-    const {id} = useParams();
-    console.log(id);
-
     const location = useLocation();
-
     const data = location.state;
     console.log(data.data.txt, "data");
+    const navigate = useNavigate();
 
 
     const dummyList = [
@@ -73,8 +69,9 @@ export default function BoardDetail(){
             "authorProfileImage": "https://haruby.s3.ap-northeast-2.amazonaws.com/profile/934a023d-813b-45aa-8e4c-435118780094",
             "createdAt": "2024-07-31T17:57:49",
             "title": null,
-            "content": "글 내용",
+            "content": "글 내용dddd",
             "imageList": [
+                "https://haruby.s3.ap-northeast-2.amazonaws.com/profile/f741601c-93c2-408d-8c13-8d92cdcc9118",
                 "https://haruby.s3.ap-northeast-2.amazonaws.com/profile/f741601c-93c2-408d-8c13-8d92cdcc9118"
             ],
             "imageRatio": "1",
@@ -178,16 +175,44 @@ export default function BoardDetail(){
         }
     ]
 
+    const onClick = (item) => {
+        navigate(`/Board/post/${item.postId}`, {
+            state : {
+                data : item,
+                title : data.data.txt
+            }
+        });
+      };
+
+      const posttag = [
+        {id : 0, txt : "#웹툰리뷰"},
+        {id : 1, txt : "#웹툰추천"},
+        {id : 2, txt : "#제목찾아줘"},
+        {id : 3, txt : "#웹툰추천해줘"}
+      ]
+
     return(
         <div>
             <TitleHeader title={data.data.txt}/>
             
             <div style={{padding : 10}}>
+                <div className={styles.rowContainer}>
+                    {posttag.map((item, index)=>(
+                    <div className={styles.topTagContainer}>
+                        <p className={styles.topTagTxt}>{item.txt}</p>
+                    </div>
+                    ))}
+
+                </div>
                 <div className={styles.gridContainer}>
                 {dummyList.map((item, index)=>(
-                <div className={styles.contentContainer}>
+                <div className={styles.contentContainer} onClick={()=>onClick(item)}>
                     <div style={{display : "flex", flexDirection : 'row', width : "100%",}}>
                     <div style={{display : "flex", flexDirection : "column", alignItems : 'flex-start'}}>
+                    {item.postTags.length > 0 &&( 
+                    <div className={styles.smallTagContainer}>
+                        <p className={styles.smallTagTxt}>{item.postTags}</p>
+                    </div> )}
                     <p className={styles.title}>{item.content}</p>
                     <p className={styles.content}>{item.content}</p>
                     <div style={{display :"flex", flexDirection : "row", fontSize : 15, color : colors.color_gray1, alignItems : 'center'}}>
@@ -200,7 +225,7 @@ export default function BoardDetail(){
                     </div>
                     <div>
                         {item.imageList.length > 0 && (
-                        <img src={item.imageList} alt="이미지" style={{alignSelf : "flex-end",width : 100, height : 100, borderRadius : 12,}}referrerPolicy="no-referrer"/> )}
+                        <img src={item.imageList[0]} alt="이미지" style={{alignSelf : "flex-end",width : 100, height : 100, borderRadius : 12,}}referrerPolicy="no-referrer"/> )}
                         </div>
                     </div>
 

@@ -6,6 +6,7 @@ import Second from "./tabPage/Second"
 import Home from "./tabPage/Home"
 import BottomNav from "./BottomNav"
 import BoardDetail from "./Board/BoardDetail";
+import BaordPost from "./Board/BoardPost";
 
 
 export default function Router() {
@@ -18,6 +19,7 @@ export default function Router() {
         <Route path='/third' element={<Third />} />
         <Route path='/fourth' element={<Fourth />} />        
         <Route path='/board/:id' element={<BoardDetail/>}/>
+        <Route path='/board/post/:id' element={<BaordPost/>}/>
       </Routes>
     </BrowserRouter>
   );
