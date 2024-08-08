@@ -24,7 +24,7 @@ export default function BottomNav(){
       </NavLink>
       <NavLink to="/second" className={styles.navLink} onClick={()=>{clickTab(1)}}>
       <div className={styles.columnContainer}>
-      <img className={styles.icon} src={currentTab === 2 ? board_focused : board} alt="my"/>
+      <img className={styles.icon} src={currentTab === 1 ? board_focused : board} alt="my"/>
       <p className={styles.focusedTxt}>게시판</p>
       </div>
       </NavLink>
@@ -40,7 +40,7 @@ export default function BottomNav(){
       <p className={styles.focusedTxt}>뽑기</p>
       </div>
       </NavLink>
-      <NavLink to="/fifth" className={styles.navLink} onClick={()=>{clickTab(4)}}>
+      <NavLink to="/mypage" className={styles.navLink} onClick={()=>{clickTab(4)}}>
       <div className={styles.columnContainer}>
       <img className={styles.icon} src={currentTab === 4 ? my_focused : my} alt="my"/>
       <p className={styles.focusedTxt}>홈</p>

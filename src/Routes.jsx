@@ -7,7 +7,7 @@ import Home from "./tabPage/Home"
 import BottomNav from "./BottomNav"
 import BoardDetail from "./Board/BoardDetail";
 import BaordPost from "./Board/BoardPost";
-
+import MyPage from "./tabPage/MyPage";
 
 export default function Router() {
   return (
@@ -17,7 +17,8 @@ export default function Router() {
         <Route exact path='/' element={<Home />} />
         <Route path='/second' element={<Second />} />
         <Route path='/third' element={<Third />} />
-        <Route path='/fourth' element={<Fourth />} />        
+        <Route path='/fourth' element={<Fourth />} />      
+        <Route path='/myPage' element={<MyPage/>} /> 
         <Route path='/board/:id' element={<BoardDetail/>}/>
         <Route path='/board/post/:id' element={<BaordPost/>}/>
       </Routes>

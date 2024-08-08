@@ -1,0 +1,64 @@
+.editContainer {
+    border : 0.1em solid #999999;
+    height: 20px;
+    padding : 2px 8px;
+    border-radius: 20px;
+
+}
+
+.editTxt {
+    margin : 0px;
+    line-height: 20px;
+    font-size: 13px;
+    color : var(--color_gray0);
+    letter-spacing: -0.6px;
+}
+
+.nickname {
+    font-size: 18px;
+    font-family:  "Pretendar-Medium";
+}
+
+.info {
+    font-size: 15px;
+    color : var(--color_gray0);
+    font-family: "Pretendard-Light";
+}
+
+.monthContaienr {
+    background-color: var(--color_gray3_1);
+    padding-top:  15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 12px;
+    width: 100%
+}
+
+.monthTxt {
+    font-size: 20px;
+    font-family: "Pretendard-Medium";
+}
+
+.webtoonLogContainer {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    -webkit-box-align: center;
+    overflow-x: scroll;
+    margin-top: 10px;
+}
+
+.oneWebtoonLogContainer {
+    background-color: var(--color_gray3_1);
+    width: 95%;
+    height: 150px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.date {
+    font-size: 14px;
+    color: var(--color_gray0_1);
+}
