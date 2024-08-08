@@ -1,0 +1,31 @@
+.webtoonImageGridContainer {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    -webkit-box-align: center;
+    overflow-x: scroll;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.webtoonImg {
+    width: 97%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.genreTxt {
+    font-size: 18px;
+    font-family: "Pretendard-Medium";
+    margin-bottom: 10px;
+}
+
+.subtitleName{
+    font-size: 16px;
+    font-family: "Pretendard-Light";
+    color : var(--color_gray0_1)
+}
+

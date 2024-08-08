@@ -35,6 +35,17 @@ p {
   margin : 0;
 }
 
+ul {
+  margin : 0;
+  padding: 0;
+}
+
+li{
+  margin : 0;
+}
+
+
+
 :root {
   --color_main: #6F38E3;
   --color_purple1: #A17BF0;
