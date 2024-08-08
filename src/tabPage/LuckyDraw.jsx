@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import styled from 'styled-components';
 import { colors } from "../css";
 import LuckyDrawContainer from "../Components/LuckyDraw/LuckyDrawContainer";
+import LuckyStoreContainer from "../Components/LuckyDraw/LuckyStoreContainer";
+import GiftBox from "../Components/LuckyDraw/GiftBox";
 
 const TabMenu = styled.ul`
   display: flex;
@@ -9,6 +11,11 @@ const TabMenu = styled.ul`
   align-items: center;
   justify-content : flex-start;
   padding : 10px;
+  position : fixed;
+  background-color : white;
+  width : 100%;
+  height : 44px;
+  padding : 6px;
 
   .submenu {
   // 기본 Tabmenu 에 대한 CSS를 구현
@@ -56,6 +63,12 @@ export default function LuckyDraw() {
       </TabMenu>
       {currentTab === 0 && (
         <LuckyDrawContainer />
+      )}
+      {currentTab === 1 && (
+        <LuckyStoreContainer />
+      )}
+      {currentTab === 2 && (
+        <GiftBox />
       )}
     </div>
     </>

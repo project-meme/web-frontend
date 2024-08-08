@@ -14,7 +14,7 @@ export default function LuckyDrawContainer(){
     ]
     return(
         <div>
-            <div className={styles.mainbanner}>
+            <div className={styles.mainbanner} style={{paddingTop :56}}>
             </div>
             <div className={styles.infoContainer}>
                 <p className={styles.infoTitle}>꽝 없는 100% 당첨 럭키드로우</p>

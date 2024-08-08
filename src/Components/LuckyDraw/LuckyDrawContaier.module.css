@@ -33,17 +33,18 @@
 }
 
 .bigItemContainer {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color_gray3);
     width : 99%;
     height: 210px;
     border-radius: 12px;
     align-items: center;
     justify-content: center;
-
 }
 
 .bigItemImg {
-    width : 95%;
+    width : 97%;
     height: 150px;
     object-fit: contain;
 }
