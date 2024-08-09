@@ -14,6 +14,7 @@ function KakaoAdFit({unit, width, height, disabled}) {
                 if (globalAdfit) globalAdfit.destroy(unit);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
       
     return <div ref={scriptElementWrapper}>
