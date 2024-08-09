@@ -5,11 +5,13 @@ import { elapsedTime } from "../utils/TimeConverter";
 import styles from "./Board.module.css"
 import thumbs from "../Aseets/thumbs_black.png"
 import scrap from "../Aseets/star_black.png"
+import KakaoAdFit from "../Components/Common/KakaoAdfit";
 
 export default function BaordPost() {
     const location = useLocation();
     const data = location.state;
     console.log(data,"locadata");
+
     return(
         <div>
             <TitleHeader title={data.title}/>
@@ -40,6 +42,14 @@ export default function BaordPost() {
                 </div>
             </div>
             <div style={{width : "100%", backgroundColor : "#606060", height : 10, marginTop : 20,}}/>
+            <div style={{width : "100%", height : 100,}}>
+            <KakaoAdFit
+                unit = {"DAN-BqLwxSeCt1hDkazw"}
+                width = {"320"}
+                height={"100"}
+                disabled={false}
+            />
+            </div>
             <div style={{display : "flex", flexDirection : "row", marginLeft : 20,}}>
                 <p>댓글 {data.data.commentCnt}</p>
             </div>
