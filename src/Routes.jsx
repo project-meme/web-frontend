@@ -8,6 +8,7 @@ import BottomNav from "./BottomNav"
 import BoardDetail from "./Board/BoardDetail";
 import BaordPost from "./Board/BoardPost";
 import MyPage from "./tabPage/MyPage";
+import KakaoTest from "./Components/Common/KakaoText";
 
 export default function Router() {
   return (
@@ -21,6 +22,7 @@ export default function Router() {
         <Route path='/myPage' element={<MyPage/>} /> 
         <Route path='/board/:id' element={<BoardDetail/>}/>
         <Route path='/board/post/:id' element={<BaordPost/>}/>
+        <Route path='/kakaoTest' element={<KakaoTest/>}/>
       </Routes>
     </BrowserRouter>
   );
