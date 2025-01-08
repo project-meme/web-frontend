@@ -30,18 +30,18 @@ export default function Home() {
   : "https://apps.apple.com/kr/app/isekai/id6473546532";
 
   const checkAppInstalled = () => {
-    const startTime = Date.now();
+    // const startTime = Date.now();
 
     // 딥링크 호출
     window.location.href = appLink;
 
     // 1.5초 후 사용자가 앱 설치 여부에 따라 앱이 실행되지 않았다면 스토어로 리디렉션
     setTimeout(() => {
-      const elapsedTime = Date.now() - startTime;
-      if (elapsedTime < 1500) {
-        // 앱이 없는 경우 앱 스토어로 리디렉션
+      // const elapsedTime = Date.now() - startTime;
+      // if (elapsedTime < 1500) {
+      //   // 앱이 없는 경우 앱 스토어로 리디렉션
         window.location.href = storeLink;
-      }
+      // }
     }, 1500);
   };
 
