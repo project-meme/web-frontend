@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import TitleHeader from "../Components/Layout/Header/TitleHeader";
 import { useLocation } from "react-router-dom";
 
 export default function BaordPost() {
@@ -12,9 +11,9 @@ export default function BaordPost() {
     useEffect(() => {
         const checkAppAndRedirect = () => {
             
-        // const currentPath = location.pathname; // 현재 경로
-        const appUrl = `isekai://post/456`; // 동적으로 딥링크 생성
-          const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
+        const currentPath = location.pathname; // 현재 경로
+        const appUrl = `isekai://${currentPath}`; // 동적으로 딥링크 생성
+        const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
           
           const redirectToApp = () => {
             // 앱 딥링크로 이동
@@ -41,7 +40,7 @@ export default function BaordPost() {
 
     return(
         <div>
-            <TitleHeader title={"ㅇㅇ"}/>
+            {/* <TitleHeader title={"ㅇㅇ"}/> */}
             {/* <div className={styles.flexContainer}>
                 <div className={styles.postContainer}>
                 <p className={styles.titleTxt}>{data.data.content}</p>
