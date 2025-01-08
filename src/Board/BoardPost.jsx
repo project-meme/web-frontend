@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import TitleHeader from "../Components/Layout/Header/TitleHeader";
 import { useLocation } from "react-router-dom";
 import { elapsedTime } from "../utils/TimeConverter";
@@ -11,6 +11,36 @@ export default function BaordPost() {
     const location = useLocation();
     const data = location.state;
     console.log(data,"locadata");
+
+    useEffect(() => {
+        const checkAppAndRedirect = () => {
+          // 앱에서 처리할 프로토콜
+          const appUrl = "isekai://post/456";
+          const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532";
+    
+          // 딥 링크 시도
+          const openApp = () => {
+            window.location.href = appUrl;
+    
+            setTimeout(() => {
+              // 일정 시간 후에도 이동되지 않으면 앱스토어로
+              window.location.href = appStoreUrl;
+            }, 2000); // 2초 대기
+          };
+    
+          // PC나 기타 환경에서는 안내 메시지
+          if (
+            /Android/.test(navigator.userAgent) ||
+            /iPhone|iPad|iPod/.test(navigator.userAgent)
+          ) {
+            openApp();
+          } else {
+            alert("앱에서만 지원하는 기능입니다. 앱을 다운로드해주세요!");
+          }
+        };
+    
+        checkAppAndRedirect();
+      }, []);
 
     return(
         <div>
