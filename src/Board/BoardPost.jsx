@@ -31,7 +31,7 @@ export default function BaordPost() {
         // 앱이 설치되지 않았을 경우, 앱스토어로 이동
         setTimeout(() => {
           window.location.replace(storeLink);
-        }, 1000); // 2초 대기 후 앱스토어 이동
+        }, 1500); // 2초 대기 후 앱스토어 이동
       };
 
       // const isMobile = /Android|iPhone|iPad|iPod/.test(navigator.userAgent);
