@@ -12,9 +12,13 @@ export default function BaordPost() {
     const data = location.state;
     console.log(data,"locadata");
 
+    // const { postId } = useParams(); // React Router로 path parameter 추출
+
     useEffect(() => {
         const checkAppAndRedirect = () => {
-          const appUrl = "isekai://post/456"; // 딥링크
+            
+        const currentPath = location.pathname; // 현재 경로
+        const appUrl = `isekai://${currentPath}`; // 동적으로 딥링크 생성
           const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
           
           const redirectToApp = () => {
@@ -38,8 +42,8 @@ export default function BaordPost() {
         };
     
         checkAppAndRedirect();
-      }, []);
-      
+      }, [location.pathname]);
+
     return(
         <div>
             <TitleHeader title={data.title}/>

@@ -18,46 +18,10 @@ export default function Home() {
     }
   };
 
-  // 딥링크 URL (앱 내부에서 처리될 경로)
-  const appLink = "isekai://post/456";
-
-  const isAndroid = /Android/.test(navigator.userAgent);
-  // const isiOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
-  
-  // 앱스토어 또는 플레이스토어 URL
-  const storeLink = isAndroid
-  ? "https://play.google.com/store/apps/details?id=com.isekai.isekai"
-  : "https://apps.apple.com/kr/app/isekai/id6473546532";
-
-  const checkAppInstalled = () => {
-    // const startTime = Date.now();
-
-    // 딥링크 호출
-    window.location.href = appLink;
-
-    // 1.5초 후 사용자가 앱 설치 여부에 따라 앱이 실행되지 않았다면 스토어로 리디렉션
-    setTimeout(() => {
-      // const elapsedTime = Date.now() - startTime;
-      // if (elapsedTime < 1500) {
-      //   // 앱이 없는 경우 앱 스토어로 리디렉션
-        window.location.href = storeLink;
-      // }
-    }, 1500);
-  };
-
+  // 딥링크 URL (앱 내부에서 처리될 경로
   useEffect(()=>{
     fetchData();
     console.log(genreBoard);
-    checkAppInstalled();
-    if (
-      /Android/.test(navigator.userAgent) ||
-      /iPhone|iPad|iPod/.test(navigator.userAgent)
-    ) {
-      window.location.href =
-        "https://apps.apple.com/kr/app/isekai/id6473546532";
-    } else {
-      alert("앱을 다운로드해주세요!");
-    }
   });
 
   const redirectToAppStore = () => {
