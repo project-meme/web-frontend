@@ -12,10 +12,17 @@ export default function BaordPost() {
         const checkAppAndRedirect = () => {
             
         const currentPath = location.pathname; // 현재 경로
-        alert(currentPath);
+       
+
+        const isAndroid = /Android/.test(navigator.userAgent);
+
+        const storeLink = isAndroid
+        ? "https://play.google.com/store/apps/details?id=com.isekai.isekai"
+        : "https://apps.apple.com/kr/app/isekai/id6473546532";
         
-        const appUrl = `isekai:/${currentPath}`; // 동적으로 딥링크 생성
-        const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
+        const appUrl = `isekai:/${currentPath}`;
+        alert(appUrl); // 동적으로 딥링크 생성
+        // const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
           
       const redirectToApp = () => {
         // 앱 딥링크로 이동
@@ -23,18 +30,18 @@ export default function BaordPost() {
 
         // 앱이 설치되지 않았을 경우, 앱스토어로 이동
         setTimeout(() => {
-          window.location.replace(appStoreUrl);
+          window.location.replace(storeLink);
         }, 2000); // 2초 대기 후 앱스토어 이동
       };
 
-      const isMobile = /Android|iPhone|iPad|iPod/.test(navigator.userAgent);
-      if (isMobile) {
+      // const isMobile = /Android|iPhone|iPad|iPod/.test(navigator.userAgent);
+      // if (isMobile) {
         // 모바일 환경에서만 동작
         redirectToApp();
-      } else {
-        // PC의 경우 메시지 표시
-        alert("앱에서만 지원하는 기능입니다. 앱을 다운로드해주세요!");
-      }
+      // } else {
+      //   // PC의 경우 메시지 표시
+      //   alert("앱에서만 지원하는 기능입니다. 앱을 다운로드해주세요!");
+      // }
     };
     
         checkAppAndRedirect();
