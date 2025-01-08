@@ -49,7 +49,7 @@ export default function BaordPost() {
 
     return(
         <div>
-          <p>리다이렉트 중입니다</p>
+          {/* <p>리다이렉트 중입니다</p> */}
             {/* <TitleHeader title={"ㅇㅇ"}/> */}
             {/* <div className={styles.flexContainer}>
                 <div className={styles.postContainer}>
