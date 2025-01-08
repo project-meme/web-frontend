@@ -21,7 +21,7 @@ export default function BaordPost() {
         : "https://apps.apple.com/kr/app/isekai/id6473546532";
         
         const appUrl = `isekai:/${currentPath}`;
-        alert(appUrl); // 동적으로 딥링크 생성
+        // alert(appUrl); // 동적으로 딥링크 생성
         // const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
           
       const redirectToApp = () => {
