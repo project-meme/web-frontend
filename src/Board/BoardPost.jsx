@@ -13,7 +13,8 @@ export default function BaordPost() {
             
         const currentPath = location.pathname; // 현재 경로
         alert(currentPath);
-        const appUrl = `isekai://${currentPath}`; // 동적으로 딥링크 생성
+        
+        const appUrl = `isekai:/${currentPath}`; // 동적으로 딥링크 생성
         const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
           
       const redirectToApp = () => {
