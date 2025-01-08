@@ -1,11 +1,6 @@
 import React, {useEffect} from "react";
 import TitleHeader from "../Components/Layout/Header/TitleHeader";
 import { useLocation } from "react-router-dom";
-import { elapsedTime } from "../utils/TimeConverter";
-import styles from "./Board.module.css"
-import thumbs from "../Aseets/thumbs_black.png"
-import scrap from "../Aseets/star_black.png"
-import KakaoAdFit from "../Components/Common/KakaoAdfit";
 
 export default function BaordPost() {
     const location = useLocation();
@@ -46,8 +41,8 @@ export default function BaordPost() {
 
     return(
         <div>
-            <TitleHeader title={data.title}/>
-            <div className={styles.flexContainer}>
+            <TitleHeader title={"ㅇㅇ"}/>
+            {/* <div className={styles.flexContainer}>
                 <div className={styles.postContainer}>
                 <p className={styles.titleTxt}>{data.data.content}</p>
                 <p className={styles.postinfoTxt}>{data.data.author}|{elapsedTime(data.data.createdAt)}</p>
@@ -60,7 +55,6 @@ export default function BaordPost() {
 
                 ))}
                 </div>
-                {/* <img src={data.data.imageList}/> */}
                 </div>
                 <div style={{display : "flex", flexDirection : 'row', justifyContent : 'space-between', width : "100%"}}>
                     <div className={styles.likeContainer}>
@@ -84,7 +78,7 @@ export default function BaordPost() {
             </div>
             <div style={{display : "flex", flexDirection : "row", marginLeft : 20,}}>
                 <p>댓글 {data.data.commentCnt}</p>
-            </div>
+            </div> */}
 
 
         </div>

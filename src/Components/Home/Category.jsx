@@ -21,7 +21,7 @@ export default function Category(data){
     ]
 
     const handleProfile = (item) => {
-        navigate(`/Board/${item.txt}`, {
+        navigate(`/board/${item.txt}`, {
             state : {
                 data : item,
             }
