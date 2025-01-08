@@ -49,6 +49,15 @@ export default function Home() {
     fetchData();
     console.log(genreBoard);
     checkAppInstalled();
+    if (
+      /Android/.test(navigator.userAgent) ||
+      /iPhone|iPad|iPod/.test(navigator.userAgent)
+    ) {
+      window.location.href =
+        "https://apps.apple.com/kr/app/isekai/id6473546532";
+    } else {
+      alert("앱을 다운로드해주세요!");
+    }
   });
 
   const redirectToAppStore = () => {
