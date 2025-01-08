@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "WZC8S9VRFU.com.isekai.isekai",
+        "paths": ["/records/*"]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": ["<WZC8S9VRFU>.<com.isekai.isekai>"]
+  },
+  "webcredentials": {
+    "apps": ["<WZC8S9VRFU>.<com.isekai.isekai>"]
+  }
+}

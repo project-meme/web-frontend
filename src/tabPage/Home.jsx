@@ -21,11 +21,33 @@ export default function Home() {
   useEffect(()=>{
     fetchData();
     console.log(genreBoard);
+    if (
+      /Android/.test(navigator.userAgent) ||
+      /iPhone|iPad|iPod/.test(navigator.userAgent)
+    ) {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.isekai.app";
+    } else {
+      alert("앱을 다운로드해주세요!");
+    }
   });
+
+  const redirectToAppStore = () => {
+    if (
+      /Android/.test(navigator.userAgent) ||
+      /iPhone|iPad|iPod/.test(navigator.userAgent)
+    ) {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.isekai.app";
+    } else {
+      alert("앱을 다운로드해주세요!");
+    }
+  };
 
   return (
     <Layout home={true}>
       <MainBanner />
+      <button onClick={redirectToAppStore}>앱 열기</button>
       <Category data={genreBoard}/>
       <BestScene />
     </Layout>
