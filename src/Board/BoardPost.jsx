@@ -14,34 +14,32 @@ export default function BaordPost() {
 
     useEffect(() => {
         const checkAppAndRedirect = () => {
-          // 앱에서 처리할 프로토콜
-          const appUrl = "isekai://post/456";
-          const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532";
+          const appUrl = "isekai://post/456"; // 딥링크
+          const appStoreUrl = "https://apps.apple.com/kr/app/isekai/id6473546532"; // 앱스토어 URL
+          
+          const redirectToApp = () => {
+            // 앱 딥링크로 이동
+            window.location.replace(appUrl);
     
-          // 딥 링크 시도
-          const openApp = () => {
-            window.location.href = appUrl;
-    
+            // 앱이 설치되지 않았을 경우, 앱스토어로 이동
             setTimeout(() => {
-              // 일정 시간 후에도 이동되지 않으면 앱스토어로
-              window.location.href = appStoreUrl;
-            }, 2000); // 2초 대기
+              window.location.replace(appStoreUrl);
+            }, 2000); // 2초 대기 후 앱스토어 이동
           };
     
-          // PC나 기타 환경에서는 안내 메시지
-          if (
-            /Android/.test(navigator.userAgent) ||
-            /iPhone|iPad|iPod/.test(navigator.userAgent)
-          ) {
-            openApp();
+          const isMobile = /Android|iPhone|iPad|iPod/.test(navigator.userAgent);
+          if (isMobile) {
+            // 모바일 환경에서만 동작
+            redirectToApp();
           } else {
+            // PC의 경우 메시지 표시
             alert("앱에서만 지원하는 기능입니다. 앱을 다운로드해주세요!");
           }
         };
     
         checkAppAndRedirect();
       }, []);
-
+      
     return(
         <div>
             <TitleHeader title={data.title}/>
