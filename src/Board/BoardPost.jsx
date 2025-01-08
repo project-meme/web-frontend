@@ -31,7 +31,7 @@ export default function BaordPost() {
         // 앱이 설치되지 않았을 경우, 앱스토어로 이동
         setTimeout(() => {
           window.location.replace(storeLink);
-        }, 2000); // 2초 대기 후 앱스토어 이동
+        }, 1000); // 2초 대기 후 앱스토어 이동
       };
 
       // const isMobile = /Android|iPhone|iPad|iPod/.test(navigator.userAgent);
@@ -49,6 +49,7 @@ export default function BaordPost() {
 
     return(
         <div>
+          <p>리다이렉트 중입니다</p>
             {/* <TitleHeader title={"ㅇㅇ"}/> */}
             {/* <div className={styles.flexContainer}>
                 <div className={styles.postContainer}>
