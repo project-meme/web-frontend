@@ -176,7 +176,7 @@ export default function BoardDetail(){
     ]
 
     const onClick = (item) => {
-        navigate(`/board/post/${item.postId}`, {
+        navigate(`/post/${item.postId}`, {
             state : {
                 data : item,
                 title : data.data.txt
