@@ -21,7 +21,7 @@ export default function Router() {
         <Route path='/fourth' element={<LuckyDraw />} />      
         <Route path='/myPage' element={<MyPage/>} /> 
         <Route path='/board/:id' element={<BoardDetail/>}/>
-        <Route path='board/post/:id' element={<BaordPost/>}/>
+        <Route path='/board/post/:id' element={<BaordPost/>}/>
         <Route path='/kakaoTest' element={<KakaoTest/>}/>
       </Routes>
     </BrowserRouter>
