@@ -25,7 +25,7 @@ export default function Router() {
         <Route path='/board/:id' element={<BoardDetail/>}/> */}
         <Route path='/post/:id' element={<BaordPost/>}/>
         <Route path='review/:webtoonTitle' element={<ReviewByWebtoon/>} />
-        <Route path='fanpage/:fanpageId' element={<FanPage/>}/>
+        <Route path='fanpage/:fanpageId/:webtoonId' element={<FanPage/>}/>
         {/* <Route path='/kakaoTest' element={<KakaoTest/>}/> */}
       </Routes>
     </BrowserRouter>
