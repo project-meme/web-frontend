@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import BoardDetail from "./Board/BoardDetail";
 import BaordPost from "./Board/BoardPost";
 import ReviewByWebtoon from "./Board/ReviewByWebtoon";
+import FanPage from "./Board/FanPage";
 // import MyPage from "./tabPage/MyPage";
 // import KakaoTest from "./Components/Common/KakaoText";
 
@@ -24,6 +25,7 @@ export default function Router() {
         <Route path='/board/:id' element={<BoardDetail/>}/> */}
         <Route path='/post/:id' element={<BaordPost/>}/>
         <Route path='review/:webtoonTitle' element={<ReviewByWebtoon/>} />
+        <Route path='fanpage/:fanpageId' element={<FanPage/>}/>
         {/* <Route path='/kakaoTest' element={<KakaoTest/>}/> */}
       </Routes>
     </BrowserRouter>
