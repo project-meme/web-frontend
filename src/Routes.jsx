@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BaordPost from "./Board/BoardPost";
 import ReviewByWebtoon from "./Board/ReviewByWebtoon";
 import FanPage from "./Board/FanPage";
+import NewHome from "./tabPage/NewHome";
 // import MyPage from "./tabPage/MyPage";
 // import KakaoTest from "./Components/Common/KakaoText";
 
@@ -23,6 +24,7 @@ export default function Router() {
         <Route path='/fourth' element={<LuckyDraw />} />      
         <Route path='/myPage' element={<MyPage/>} /> 
         <Route path='/board/:id' element={<BoardDetail/>}/> */}
+        <Route exact path='/' element={<NewHome />} />
         <Route path='/post/:id' element={<BaordPost/>}/>
         <Route path='review/:webtoonTitle' element={<ReviewByWebtoon/>} />
         <Route path='fanpage/:fanpageId/:webtoonId' element={<FanPage/>}/>

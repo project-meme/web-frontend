@@ -14,13 +14,37 @@
 }
 
 @font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("./Fonts/Pretendard-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Pretendard-Medium";
   src: url("./Fonts/Pretendard-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("./Fonts/Pretendard-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ddag";
+  src: url("./Fonts/ddag.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RiaSans-ExtraBold";
+  src: url("./Fonts/RiaSans-ExtraBold.ttf") format("truetype");
+}
+
+
+
 body {
-  margin: 0;
-  max-width: 500px;
+  overflow-x: hidden;  /* 가로 스크롤 방지 */
+  width: 100%;
+  margin: 0px;
+  padding : 0px;
   font-family: "Pretendard-Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,16 +56,24 @@ code {
 }
 
 p {
-  margin : 0;
+  margin : 0px;
 }
 
 ul {
-  margin : 0;
-  padding: 0;
+  margin : 0px;
+  padding: 0px;
 }
 
 li{
-  margin : 0;
+  margin : 0px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+h6 {
+  margin: 0px;
 }
 
 
@@ -60,6 +92,7 @@ li{
   --color_gray1: #999999;
   --color_gray2: #E5E5E5;
   --color_gray3: #F0F0F0;
+  --color_gray3_0 : #F9FAFB;
   --color_gray3_1 : #F4F5F9;
   --color_gray4: #F9F9F9;
   --color_pink: #E2C3DD;

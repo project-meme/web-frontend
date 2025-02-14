@@ -9,7 +9,6 @@ import my_focused from "./Aseets/my_focused.png";
 import board from "./Aseets/board.png"
 import board_focused from "./Aseets/board_focused.png"
 import best from "./Aseets/best.png";
-import best_focused from "./Aseets/best_focused.png"
 
 export default function BottomNav(){
   const [currentTab, clickTab] = useState(0);

@@ -12,35 +12,29 @@
     /* border-top-left-radius: 12px;
     border-top-right-radius: 12px; */
     border-top: 0.1px solid #444;
-    max-width: 600px;
+    /* max-width: 600px; */
 }
 
 .container_pc {
-    width: 50%;
+    background-color: #444;
     height: 4rem;
     display: flex;
-    position: absolute;
     bottom: 0;
     align-items: center;
-    justify-content: space-around;
     border-top: 0.5px solid;
 }
 
+
+
 .flexContainer {
-    overflow-x: hidden;
     overflow-y: scroll;
-    margin-top: auto;
-    padding-top: 0px;
     width : 100%;
 
 }
 
 .flexContainerPc {
-    overflow-x: hidden;
     overflow-y: scroll;
-    max-width: 600px;
-    margin-top: auto;
-    padding-top: 0px;
+    /* max-width: 600px; */
 }
 
 .columnContainer {

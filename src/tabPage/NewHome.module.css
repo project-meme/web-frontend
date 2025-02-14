@@ -1,0 +1,145 @@
+.header {
+  width: 100%;
+  height: 64px; /* 모바일에서는 줄이고, 데스크탑에서는 넉넉하게 */
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between; /* 로고와 고객센터를 좌우로 정렬 */
+  padding: 0vw 0%; /* 좌우 여백 */
+}
+
+.logo {
+  width: 10vw; /* 기본값 (데스크탑) */
+  object-fit: contain;
+}
+
+.leftCircle {
+  position: absolute;
+  top: -500px;
+  left: -900px; /* 왼쪽으로 100px만큼 이동 */
+  width: 2000px; /* 반원의 너비 */
+  height: 2000px; /* 반원의 높이 */
+  background-color: #6F38E3; /* 보라색 */
+  border-radius: 50%; /* 원 형태로 만들기 */
+  z-index: -1;
+  opacity: 0.2;
+}
+
+
+
+/* 모바일 화면 크기 조정 (예: 768px 이하) */
+@media (max-width: 768px) {
+  .logo {
+    width: 12vw; /* 모바일에서는 더 크게 */
+  }
+}
+
+/* 큰 데스크탑 화면 (예: 1200px 이상) */
+@media (min-width: 1200px) {
+  .logo {
+    width: 5vw; /* 큰 화면에서는 더 작게 */
+  }
+}
+
+.container {
+  /* background-color: var(--color_purple3); */
+  margin-top:  0px;
+}
+
+.mainContainer {
+  /* height:  1080px;
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column; */
+  /* background: linear-gradient(to bottom, #6E47FC, #B86AFF);  */
+  /* display: flex;
+  flex-direction: column; */
+  height: 820px;
+  position: relative;
+  padding: 0 15%; /* 좌우 여백 */
+  overflow: hidden; /* 반원이 밖으로 나가지 않도록 설정 */
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 0 5%; 
+    
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: aquamarine; */
+  align-items: flex-start;
+  padding-top: 100px;
+ /* 기본값: 데스크탑에서는 가로(row) 정렬 */
+  /* justify-content: center; */
+
+}
+
+/* 모바일 (768px 이하)에서는 세로(column) 정렬 */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    background-color: #aaaaaa;
+    
+  }
+}
+
+.partContainer {
+  height: 820px;
+  background-color: var(--color_gray3_0);
+  padding: 0 15%; /* 좌우 여백 */
+  overflow: hidden; 
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.image {
+  max-width: 500px;    /* 최대 너비 300px로 제한 */
+  height: auto;        /* 비율에 맞게 높이 자동 설정 */
+  object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.title {
+  font-size: 80px; /* 기본값 (데스크탑) */
+  font-family : 'Pretendard-Bold';
+}
+
+/* 태블릿 & 작은 화면 (768px 이하) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 60px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+
+.purple {
+  color : var(--color_main);
+}
+
+.big {
+    width: 200px;
+    height:  200px;
+    background-color: #aaaaaa;
+
+  }
+  .small {
+    width: 100px;
+  }
+  
+  .box {
+    height: 50px;
+    background-color: #aaaaaa;
+  }
