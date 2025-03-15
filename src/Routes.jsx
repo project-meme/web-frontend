@@ -10,6 +10,7 @@ import BaordPost from "./Board/BoardPost";
 import ReviewByWebtoon from "./Board/ReviewByWebtoon";
 import FanPage from "./Board/FanPage";
 import NewHome from "./tabPage/NewHome";
+import GroupChatting from "./Board/GroupChatting";
 // import MyPage from "./tabPage/MyPage";
 // import KakaoTest from "./Components/Common/KakaoText";
 
@@ -28,6 +29,7 @@ export default function Router() {
         <Route path='/post/:id' element={<BaordPost/>}/>
         <Route path='review/:webtoonTitle' element={<ReviewByWebtoon/>} />
         <Route path='fanpage/:fanpageId/:webtoonId' element={<FanPage/>}/>
+        <Route path='groupchatting/:webtoonId' element={<GroupChatting/>}/>
         {/* <Route path='/kakaoTest' element={<KakaoTest/>}/> */}
       </Routes>
     </BrowserRouter>
